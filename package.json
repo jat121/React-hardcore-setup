@@ -8,7 +8,7 @@
     "build": "tsc && vite build",
     "lint": "eslint \"**/*.{ts,tsx}\"",
     "preview": "vite preview",
-    "prettier": "prettier src -check",
+    "prettier": "prettier src -c",
     "lint-staged": "lint-staged",
     "husky-install": "husky init",
     "prepare": "husky"
@@ -36,13 +36,6 @@
     "typescript": "^5.4.3",
     "vite": "^5.2.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "eslint . && prettier --write .",
-      "pre-push": "npm run test:coverage",
-      "pre-push-lint": "eslint --fix ."
-    }
-  },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json}": [
       "eslint --fix --max-warnings=0"
@@ -50,7 +43,7 @@
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
       "prettier --write"
     ],
-    "*.{js,jsx,ts,tsx}": ["eslint --fix", "prettier --write"]
+    "*.{js,jsx,ts,tsx}": ["eslint --fix","prettier src -c", "prettier --write"]
   },
   "typescript": "tsc --project tsconfig.json --noEmit"
 }
