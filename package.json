@@ -9,7 +9,7 @@
     "lint": "eslint \"**/*.{ts,tsx}\"",
     "preview": "vite preview",
     "prettier": "prettier src -check",
-    "lint-staged": "lint-staged --config lint-staged.js",
+    "lint-staged": "lint-staged",
     "husky-install": "husky init",
     "prepare": "husky"
   },
@@ -42,6 +42,14 @@
       "pre-push": "npm run test:coverage",
       "pre-push-lint": "eslint --fix ."
     }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json}": [
+      "eslint --fix --max-warnings=0"
+    ],
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
   },
   "typescript": "tsc --project tsconfig.json --noEmit"
 }
