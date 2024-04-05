@@ -45,8 +45,8 @@
             "prettier --write"
         ],
         "*.{js,jsx,ts,tsx}": [
-            "eslint --fix",
-            "prettier --write"
+            "prettier --write",
+            "eslint --fix --max-warnings=0"
         ]
     },
     "typescript": "tsc --project tsconfig.json --noEmit"
