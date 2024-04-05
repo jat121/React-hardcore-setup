@@ -20,7 +20,7 @@ const App = (): JSX.Element => {
       <div className="card">
         <button
           onClick={() => {
-            setCount(count => count + 2)
+            setCount(count => count + 200)
           }}
         >
           count is {count}
