@@ -43,7 +43,7 @@
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
       "prettier --write"
     ],
-    "*.{js,jsx,ts,tsx}": ["eslint --fix","prettier src -c", "prettier --write"]
+    "*.{js,jsx,ts,tsx}": ["eslint --fix", "prettier --write"]
   },
   "typescript": "tsc --project tsconfig.json --noEmit"
 }
